@@ -1,0 +1,78 @@
+*{
+    font-family: Arial;
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+.input{
+    float: Center;
+    margin:0.5rem;
+    background-color:rgb(53, 0, 133);
+}
+h1{
+    text-align: center;
+    color:white;
+    text-decoration: underline;
+}
+.login{
+    text-align: center;
+    color:white;
+
+}
+.text{
+    background-color: rgb(142, 142, 142);
+}
+.SignUpMessage{
+    margin:20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.signup{
+    text-decoration: none;
+    color: rgb(0, 13, 255);
+}
+.button{
+    text-align: left;
+}
+.loginbutton{
+    background-color: rgb(102, 0, 255);
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    transition: 0.4s ease-out;
+}
+.loginbutton:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    color: rgb(0, 0, 106);
+}
+
+.loginbutton:active{
+    background-color: rgb(53, 0, 133);
+}
+
+.header {
+    background-color: var(--background-two);
+    padding: 20px;
+    display: grid;
+}
+
+.label {
+    background-color: rgba(117, 117, 117, 0.2);
+    padding: 2px;
+    border: 1px solid rgb(102, 0, 255);
+    border-radius: 5px;
+
+    transition: 0.4s ease-in-out;
+}
+
+.label:hover{
+    background-color: rgba(102, 0, 255, 1);
+    border: 1px solid black;
+}
