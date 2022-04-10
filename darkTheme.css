@@ -1,5 +1,5 @@
 :root {
-    --background-one: rgb(102, 0, 255);
+    --background-one: rgb(156, 89, 255);
     --background-two: rgb(53, 0, 133);
     --primary-text: rgb(17, 0, 43);
     --secondary: rgb(95, 95, 95);
@@ -14,7 +14,7 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-color: gray;
+    background-color: var(--background-one);
 }
 
 .header {
@@ -39,6 +39,7 @@ input{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: 0.25rem;
+    margin: auto;
 }
 
 .game{
@@ -46,10 +47,22 @@ input{
     background-size: cover;
     position: relative;
     height: 300px;
+    width: 300px;
+    
 }
 
 .game:hover{
     opacity: 0.5;
+}
+
+.gameDetail{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.gameIMG{
+    width: 400px;
+    height: 400px;
 }
 
 .hide{
@@ -70,12 +83,6 @@ input{
     resize: none;
     outline: none;
     width: 100%;
-}
-
-.price{ 
-    background: rgba(45, 45, 45, 0.5);
-    position: absolute;
-    bottom: 0;
 }
 
 .nav-header{
@@ -121,4 +128,8 @@ input{
 
   #logOut{
       float: right;
+  }
+
+  .page{
+      padding:20px;
   }
