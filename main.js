@@ -1,3 +1,4 @@
+
 let gamePage = document.getElementById('page');
 
 function sendValue(name , image , description , price , rating) {
@@ -34,4 +35,3 @@ makePage(
     localStorage.getItem('price'),
     localStorage.getItem('rating')
   );
-
