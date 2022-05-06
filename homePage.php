@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YesGames</title>
-    <link rel="stylesheet" href="darkTheme.css" />
-    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <h1 class="title">YesGames</h1>
-      <div class="searchWrapper">
-        <input type="text" name="search" id="search" placeholder="Search..." />
-      </div>
-    </div>
-    <div class="nav-header">
-      <ul class="nav">
-        <li class="nav-wrapper active"><a href="homePage.html">Home</a></li>
-        <li class="nav-wrapper"><a href="allGames.html">All Games</a></li>
-        <li class="nav-wrapper"><a href="aboutUs.html">About Us</a></li>
-        <li class="nav-wrapper"><a href="contactUs.html">Contact Us</a></li>
-        <li class="nav-wrapper" id="logOut">
-          <a href="index.html">Log Out</a>
-        </li>
-      </ul>
-    </div>
+<?php
+include_once 'header.php';
+?>
 
     <h1>Top games</h1>
 
@@ -100,7 +75,7 @@
         <div
           class="gameDiv"
           onclick="sendValue('Kenshin Impakt' , 'kenshinImpact.png' , 'In this game u can ' , 'FREE' , '3.9')"
-          href="game.html"
+          href="game.php"
         >
           <img src="kenshinImpact.png" class="game" />
         </div>

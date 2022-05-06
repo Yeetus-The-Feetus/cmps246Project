@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sign Up</title>
+    <title>YesGames Login</title>
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
     <div class="bg">
       <header class="header">
         <h1>Welcome to YesGames</h1>
-        <p class="login">Please fill the information to sign up:</p>
+        <p class="login">Please log in to your account to access the store</p>
       </header>
-
-      <center>
+      <div>
         <form action="">
+            <center>
           <table>
             <tr>
               <td>
-                <label class="label">Please enter a username:</label>
+                <label class="label">Username:</label>
               </td>
               <td>
                 <div class="input">
@@ -26,7 +26,7 @@
             </tr>
             <tr>
               <td>
-                <label class="label">Please enter a valid email address:</label>
+                <label class="label">Email:</label>
               </td>
               <td>
                 <div class="input">
@@ -36,7 +36,7 @@
             </tr>
             <tr>
               <td>
-                <label class="label">Please enter a password:</label>
+                <label class="label">Password:</label>
               </td>
               <td>
                 <div class="input">
@@ -45,25 +45,23 @@
               </td>
             </tr>
             <tr>
-              <td>
-                <label class="label">Confirm Password:</label>
-              </td>
-              <td>
-                <div class="input">
-                  <input type="password" class="text" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="index.html" class="loginbutton">Create account</a>
-              </td>
+                <td>
+                  <div class="button">
+                      <a href="homePage.php" class="loginbutton">Log In</a> 
+                    </div>
+                </td>
             </tr>
           </table>
         </form>
-
-        <div></div>
-      </center>
+      </div>
+      
+  </center>
+      <p class="SignUpMessage">
+        Don't have an account?<a class="signup" href="signUp.php"
+          >Sign up here!</a
+        >
+      </p>
     </div>
+    
   </body>
 </html>
