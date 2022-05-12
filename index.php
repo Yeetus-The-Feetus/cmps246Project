@@ -1,67 +1,71 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>YesGames Login</title>
-    <link rel="stylesheet" href="login.css" />
-  </head>
-  <body>
-    <div class="bg">
-      <header class="header">
-        <h1>Welcome to YesGames</h1>
-        <p class="login">Please log in to your account to access the store</p>
-      </header>
-      <div>
-        <form action="">
-            <center>
-          <table>
-            <tr>
-              <td>
-                <label class="label">Username:</label>
-              </td>
-              <td>
-                <div class="input">
-                  <input type="text" class="text" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label class="label">Email:</label>
-              </td>
-              <td>
-                <div class="input">
-                  <input type="email" class="text" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label class="label">Password:</label>
-              </td>
-              <td>
-                <div class="input">
-                  <input type="password" class="text" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-                <td>
-                  <div class="button">
-                      <a href="homePage.php" class="loginbutton">Log In</a> 
-                    </div>
-                </td>
-            </tr>
-          </table>
-        </form>
-      </div>
-      
-  </center>
-      <p class="SignUpMessage">
-        Don't have an account?<a class="signup" href="signUp.php"
-          >Sign up here!</a
-        >
-      </p>
+<?php
+include_once 'header.php';
+?>
+<?php
+include("dbconnect.php");
+
+$freeGames = mysqli_query($db, "SELECT * FROM games WHERE price=0");
+$budgetGames = mysqli_query($db, "SELECT * FROM games WHERE price > 0 AND price < 15");
+$topGames = mysqli_query($db, "SELECT * FROM games WHERE rating > 4.2");
+?>
+
+    <h1>Top games</h1>
+
+    <div class="gameList">
+    <?php
+    while ($row = mysqli_fetch_assoc($topGames)) {
+        
+        $gid = $row['id'];
+        $gname = $row['name'];
+        $gpic = $row['picture'];
+        $gdescription = $row['description'];
+        $gprice = $row['price'];
+        $grating = $row['rating'];
+        
+        echo "<div class=\"game-wrapper\"> <div class=\"gameDiv\" onclick=\"sendValue('$gname' , '$gpic' , '$gdescription' , '$gprice$' , '$grating')\" > <img src=\"images/$gpic\" class=\"game\" /></div><div class=\"price\">$gprice$</div></div>";
+    }
+?>
     </div>
-    
+
+    <h1>Under 15$</h1>
+    <div class="gameList">
+    <?php
+    while ($row = mysqli_fetch_assoc($budgetGames)) {
+        
+        $gid = $row['id'];
+        $gname = $row['name'];
+        $gpic = $row['picture'];
+        $gdescription = $row['description'];
+        $gprice = $row['price'];
+        $grating = $row['rating'];
+        
+        echo "<div class=\"game-wrapper\"> <div class=\"gameDiv\" onclick=\"sendValue('$gname' , '$gpic' , '$gdescription' , '$gprice$' , '$grating')\" > <img src=\"images/$gpic\" class=\"game\" /></div><div class=\"price\">$gprice$</div></div>";
+    }
+?>
+    </div>
+
+    <h1>Free Games</h1>
+    <div class="gameList">
+    <?php
+    while ($row = mysqli_fetch_assoc($freeGames)) {
+        
+        $gid = $row['id'];
+        $gname = $row['name'];
+        $gpic = $row['picture'];
+        $gdescription = $row['description'];
+        $gprice = $row['price'];
+        $grating = $row['rating'];
+        
+        echo "<div class=\"game-wrapper\"> <div class=\"gameDiv\" onclick=\"sendValue('$gname' , '$gpic' , '$gdescription' , '$gprice$' , '$grating')\" > <img src=\"images/$gpic\" class=\"game\" /></div><div class=\"price\">$gprice$</div></div>";
+    }
+?>
+    </div>
+
+    <a href="#" class="top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="main.js"></script>
+    <script src="topBTN.js"></script>
   </body>
 </html>

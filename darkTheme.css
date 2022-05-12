@@ -67,12 +67,22 @@ input{
 .hide{
     display: none;
 }
-
+.purchase-btn{
+    width: fit-content;
+    background-color: rgb(102, 0, 255);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+.purchase-btn:hover{
+    background-color: var(--background-two);
+    cursor: pointer;
+}
 
 /* nav and header */
 
 .header {
-    /* background-image: url(images/bg.jpg); */
+    background-image: url(images/headbg.jpg);
     padding: 20px;
     display: grid;
 }
@@ -89,7 +99,32 @@ input{
     border-radius: 20px;
     padding-left: 5%;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
+
+.logout {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    background-color: rgb(102, 0, 255);
+    color: #fff;
+    padding: 17px 50px;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+
+.logout:hover {
+    transform: scale(1.04, 1);
+    background-color: var(--background-two);
+    text-decoration: none;
+}
+
 
 #search{
     color: var(--primary-text);
@@ -97,7 +132,7 @@ input{
     background-color: transparent;
     resize: none;
     outline: none;
-    width: 100%;
+    width: 90%;
 }
 
 .nav-header{
@@ -150,9 +185,17 @@ input{
   }
 
 
+ .btn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(53, 0, 133);
+  }
+
 /* scroll up button */
 .top{
-    background: rgba(3, 3, 3, 0.8);
+    background: rgba(143, 0, 226, 0.342);
     position: fixed;
     bottom: 16px;
     right: 32px;

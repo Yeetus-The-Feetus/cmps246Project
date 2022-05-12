@@ -5,7 +5,7 @@
 }
 
 .bg{
-    background-image: url(bg.jpg);
+    background-image: url(images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -35,10 +35,15 @@ h1{
     background-color: rgb(142, 142, 142);
 }
 .SignUpMessage{
+    border-radius: 15px;
+    width:fit-content;
+    padding: 15px;
+    border-radius: 15px;
     margin:20px;
     position: absolute;
     bottom: 0;
     left: 0;
+	background-color: rgba(72, 0, 179, 0.226);
 }
 .signup{
     text-decoration: none;
@@ -85,4 +90,21 @@ h1{
 .label:hover{
     background-color: rgba(102, 0, 255, 1);
     border: 1px solid black;
+}
+
+.error, .success{
+    border: 1px solid;
+    width:fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.error{
+    color: #D8000C;
+    background-color: #ff8c8c;  
+}
+.success{
+    color: #61bb00;
+	background-color: #c9ff6c;
 }
